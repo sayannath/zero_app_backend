@@ -35,8 +35,12 @@ app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
 
+app.get("/", function(req, res) {  
+  res.send("Hello World!");  
+}); 
+
 //PORT
-const port = process.env.PORT || 2000;
+const port = process.env.PORT || 3000;
 
 //Starting a server
 app.listen(port, () => {
