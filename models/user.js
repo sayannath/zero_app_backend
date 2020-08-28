@@ -19,11 +19,32 @@ var userSchema = new mongoose.Schema(
       type: String,
       trim: true,
       required: true,
-      //unique: true,
+      unique: true,
     },
     phone: {
       type: String,
       maxlength: 20,
+      unique: true,
+    },
+    latitude: {
+      type: String,
+      maxlength: 100,
+      trim: true,
+    },
+    longitude: {
+      type: String,
+      maxlength: 100,
+      trim: true,
+    },
+    address: {
+      type: String,
+      maxlength: 1000,
+      trim: true,
+    },
+    pincode: {
+      type: String,
+      maxlength: 20,
+      trim: true,
     },
     userinfo: {
       type: String,
