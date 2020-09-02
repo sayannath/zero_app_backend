@@ -21,6 +21,11 @@ const productSchema = new mongoose.Schema(
       maxlength: 32,
       trim: true,
     },
+    user : {
+      type: ObjectId,
+      ref: "User",
+      required: true,
+    },
     category: {
       type: ObjectId,
       ref: "Category",

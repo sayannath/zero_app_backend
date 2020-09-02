@@ -180,3 +180,7 @@ exports.updateStock = (req, res, next) => {
     next();
   });
 };
+
+exports.getUserProduct = (req, res) => {
+  
+}

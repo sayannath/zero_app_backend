@@ -5,11 +5,12 @@ const {
   getProductById,
   createProduct,
   getProduct,
+  getUserProduct,
   photo,
   deleteProduct,
   updateProduct,
   getAllProducts,
-  getAllUniqueCategories
+  getAllUniqueCategories,
 } = require("../controllers/product");
 const { isSignedIn, isAuthenticated, isAdmin } = require("../controllers/auth");
 const { getUserById } = require("../controllers/user");
@@ -32,6 +33,15 @@ router.post(
 // Read Routes
 router.get("/product/:productId", getProduct);
 router.get("/product/photo/:productId", photo);
+
+//get product using post
+router.post(
+  "/products/:userId",
+  isSignedIn,
+  isAuthenticated,
+  isAdmin,
+  getUserProduct
+);
 
 //Delete Routes
 router.delete(

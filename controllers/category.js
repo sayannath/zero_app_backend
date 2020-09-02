@@ -1,6 +1,6 @@
 const Category = require("../models/category");
 
-// etch Category by ID
+// Fetch Category by ID
 exports.getCategoryById = (req, res, next, id) => {
   Category.findById(id).exec((err, cate) => {
     if (err) {
