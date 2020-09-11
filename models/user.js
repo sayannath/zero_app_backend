@@ -36,6 +36,11 @@ var userSchema = new mongoose.Schema(
       maxlength: 100,
       trim: true,
     },
+    shopName: {
+      type: String,
+      maxlength: 64,
+      trim: true
+    },
     address: {
       type: String,
       maxlength: 1000,
