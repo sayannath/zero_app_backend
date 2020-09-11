@@ -23,6 +23,7 @@ exports.signup = (req, res) => {
       name: user.name,
       lastname: user.lastname,
       email: user.email,
+      role: user.role,
       id: user._id,
     });
   });
